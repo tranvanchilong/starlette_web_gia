@@ -1,0 +1,64 @@
+{% extends "base.html" %} {% block head%} {% endblock %} {% block content%}
+<div class="container">
+          <div class="header-bottom">
+            <div class="cate-list d-flex flex-wrap">
+              {% if path=="tienao" %}
+                {% for cat in name_datas[:60] %}  
+                    {%if cat.name != "tiền ảo" and cat.name != "tại các ngân hàng" and "detail" not in cat.name_path%}
+                      <a class="cate-item" href="/{{path}}/{{cat.name_path}}">{{cat.name}}</a>
+                    {%endif%}
+                 {%endfor%}
+              {% else %}
+                {% for cat in name_datas %}  
+                    {%if cat.name != "tiền ảo" and cat.name != "tại các ngân hàng" and "detail" not in cat.name_path%}
+                      <a class="cate-item" href="/{{path}}/{{cat.name_path}}">{{cat.name}}</a>
+                    {%endif%}
+                 {%endfor%}
+              {%endif%}
+            </div>
+          </div>
+        </div>
+      </section>
+    </header>
+    <main>
+      <div class="container">
+        <div class="row mt-2">
+          <article id="main" class="col-md-9 p-3">
+            <h1 class="h5 text-main">
+              {{father}} {{name}}
+              <small> - Cập nhật lúc {{time.strftime("%H:%M:%S")}} {{time.strftime("%d/%m/%Y")}}</small>
+            </h1>
+            <p>
+              Bảng so sánh {{father}} {{name}} trên toàn quốc cập nhật lúc
+              <span class="text-main">{{time.strftime("%H:%M:%S")}} {{time.strftime("%d/%m/%Y")}}</span>
+            </p>
+            {% if path=="giavang"%}
+              <p>
+                Giá vàng SJC được cập nhật liên tục tại các hệ thống: SJC, DOJI,
+                PNJ, Phú Quý, Bảo Tín Minh Châu.
+              </p>
+              <!-- <p>
+                Ở bảng so sánh bên dưới,
+                <span class="text-green fw-semibold">màu xanh</span> ở cột
+                <span class="text-brown fw-semibold">Mua vào</span> sẽ tương ứng
+                với giá
+                <span class="text-brown fw-semibold">Mua vào cao nhất</span>;
+                <span class="text-green fw-semibold">màu xanh</span> ở cột Bán ra
+                sẽ tương ứng với giá
+                <span class="text-brown fw-semibold">bán ra thấp nhất</span>.
+              </p> -->
+            
+              <div class="unit text-end fst-italic fw-semibold text-red">
+                <p>Đơn vị: đồng / chỉ</p></div>
+            {% elif path=="tygia" or path=="ngoaite" %}
+              <div class="unit text-end fst-italic fw-semibold text-red">
+                <p>Đơn vị: đồng</p></div>
+            {% elif path=="laisuat" %}
+              <div class="unit text-end fst-italic fw-semibold text-red">
+                <p>Đơn vị: %/năm</p></div>
+            {% else %}
+            {% endif %}
+
+
+<div>{{data|safe}}</div>
+{% endblock %}

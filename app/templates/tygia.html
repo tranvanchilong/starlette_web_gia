@@ -1,0 +1,865 @@
+{% extends "base.html" %} {% block head%} {% endblock %} {% block content%}
+<div class="container">
+          <div class="header-bottom">
+            <div class="cate-list d-flex flex-wrap">
+                  
+              <a class="cate-item" href="/tygia/oceanbank">OceanBank</a>
+
+                
+              <a class="cate-item" href="/tygia/public-bank">PublicBank</a>
+
+                
+              <a class="cate-item" href="/tygia/dong-a">Đông Á</a>
+
+                
+              <a class="cate-item" href="/tygia/bidv">BIDV</a>
+
+                
+              <a class="cate-item" href="/tygia/mbbank">MB</a>
+
+                
+              <a class="cate-item" href="/tygia/eximbank">EximBank</a>
+
+                
+              <a class="cate-item" href="/tygia/vpbank">VPBank</a>
+
+                
+              <a class="cate-item" href="/tygia/kien-long">Kiên Long</a>
+
+                
+              <a class="cate-item" href="/tygia/agribank">Agribank</a>
+
+                
+              <a class="cate-item" href="/tygia/ncb">NCB</a>
+
+                
+              <a class="cate-item" href="/tygia/hsbc">HSBC</a>
+
+                
+              <a class="cate-item" href="/tygia/viet-capital-bank">Viet Capital Bank</a>
+
+                
+              <a class="cate-item" href="/tygia/uob">UOB</a>
+
+                
+              <a class="cate-item" href="/tygia/viettinbank">VietinBank</a>
+
+                
+              <a class="cate-item" href="/tygia/abbank">ABBank</a>
+
+                
+              <a class="cate-item" href="/tygia/hong-leong">Hong Leong</a>
+
+                
+              <a class="cate-item" href="/tygia/hdbank">HDBank</a>
+
+                
+              <a class="cate-item" href="/tygia/ocb">OCB</a>
+
+                
+              <a class="cate-item" href="/tygia/vrbank">VRBank</a>
+
+                
+              <a class="cate-item" href="/tygia/vietcombank">Vietcombank</a>
+
+                
+              <a class="cate-item" href="/tygia/techcombank">Techcombank</a>
+
+                
+              <a class="cate-item" href="/tygia/scb">SCB</a>
+
+                
+              <a class="cate-item" href="/tygia/seabank">SeABank</a>
+
+                
+              <a class="cate-item" href="/tygia/pvcombank">PVcomBank</a>
+
+                
+              <a class="cate-item" href="/tygia/pgbank">PGBank</a>
+
+                
+              <a class="cate-item" href="/tygia/mariatime-bank">Maritime Bank</a>
+
+                
+              <a class="cate-item" href="/tygia/vib">VIB</a>
+
+                
+              <a class="cate-item" href="/tygia/tpbank">TPBank</a>
+
+                
+              <a class="cate-item" href="/tygia/gpbank">GPBank</a>
+
+                
+              <a class="cate-item" href="/tygia/ban-viet">Bản Việt</a>
+
+                
+              <a class="cate-item" href="/tygia/indovina-bank">Indovina Bank</a>
+
+                
+              <a class="cate-item" href="/tygia/sacombank">Sacombank</a>
+
+                
+              <a class="cate-item" href="/tygia/bao-viet">Bảo Việt</a>
+
+                
+              <a class="cate-item" href="/tygia/viet-a-bank">VietABank</a>
+
+                
+              <a class="cate-item" href="/tygia/cbbank">CBBank</a>
+
+                
+              <a class="cate-item" href="/tygia/viet-bank">Việt Bank</a>
+
+                
+              <a class="cate-item" href="/tygia/nam-a-bank">Nam Á Bank</a>
+
+                
+              <a class="cate-item" href="/tygia/shb">SHB</a>
+
+                
+              <a class="cate-item" href="/tygia/lien-viet">Liên Việt</a>
+
+                
+              <a class="cate-item" href="/tygia/saigonbank">SaigonBank</a>
+
+                
+              <a class="cate-item" href="/tygia/acb">ACB</a>
+
+              
+            </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </header>
+    <main>
+      <div class="container">
+        <div class="row mt-2">
+          <article id="main" class="col-md-9 p-3">
+            <h1 class="h5 text-main">
+              Tổng hợp Giá vàng SJC trên Toàn Quốc
+              <small> - Cập nhật lúc 16:30:23 22/12/2022</small>
+            </h1>
+            <p>
+              Bảng so sánh giá vàng SJC trên toàn quốc cập nhật lúc
+              <span class="text-main">16:40:23 22/12/2022</span>
+            </p>
+            <p>
+              Giá vàng SJC được cập nhật liên tục tại các hệ thống: SJC, DOJI,
+              PNJ, Phú Quý, Bảo Tín Minh Châu.
+            </p>
+            <p>
+              Ở bảng so sánh bên dưới,
+              <span class="text-green fw-semibold">màu xanh</span> ở cột
+              <span class="text-brown fw-semibold">Mua vào</span> sẽ tương ứng
+              với giá
+              <span class="text-brown fw-semibold">Mua vào cao nhất</span>;
+              <span class="text-green fw-semibold">màu xanh</span> ở cột Bán ra
+              sẽ tương ứng với giá
+              <span class="text-brown fw-semibold">bán ra thấp nhất</span>.
+            </p>
+            <div class="unit text-end fst-italic fw-semibold text-red">
+              <p>Đơn vị: đồng / chỉ</p></div>
+<table class="table table-bordered table-hover table-striped text-right" id="bang_gia">
+  <thead>
+    <tr>
+      <th>Ngân hàng</th>
+      <th>Tên đầy đủ</th>
+      <th class="text-right">Thời gian cập nhật</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <a
+          href="/tygia/abbank"
+          class="bank-icon"
+          title="Tỷ giá ngân hàng TMCP An Bình"
+          ><span class="bak-icon bi-abbank"></span><span>ABBank</span></a
+        >
+      </td>
+      <td>
+        <a href="/tygia/abbank" title="Tỷ giá ngân hàng TMCP An Bình"
+          >TMCP An Bình</a
+        >
+      </td>
+      <td class="text-right">Hôm nay</td>
+    </tr>
+    <tr>
+      <td>
+        <a
+          href="/tygia/acb"
+          class="bank-icon"
+          title="Tỷ giá ngân hàng TMCP Á Châu"
+          ><span class="bak-icon bi-acb"></span><span>ACB</span></a
+        >
+      </td>
+      <td>
+        <a href="/tygia/acb" title="Tỷ giá ngân hàng TMCP Á Châu"
+          >TMCP Á Châu</a
+        >
+      </td>
+      <td class="text-right">Hôm nay</td>
+    </tr>
+    <tr>
+      <td>
+        <a
+          href="/tygia/agribank"
+          class="bank-icon"
+          title="Tỷ giá ngân hàng Nông nghiệp và Phát triển Nông thôn Việt Nam"
+          ><span class="bak-icon bi-agribank"></span><span>Agribank</span></a
+        >
+      </td>
+      <td>
+        <a
+          href="/tygia/agribank"
+          title="Tỷ giá ngân hàng Nông nghiệp và Phát triển Nông thôn Việt Nam"
+          >Nông nghiệp và Phát triển Nông thôn Việt Nam</a
+        >
+      </td>
+      <td class="text-right">Hôm nay</td>
+    </tr>
+    <tr>
+      <td>
+        <a
+          href="/tygia/bao-viet"
+          class="bank-icon"
+          title="Tỷ giá ngân hàng TMCP Bảo Việt - BAOVIET Bank"
+          ><span class="bak-icon bi-baovietbank"></span><span>Bảo Việt</span></a
+        >
+      </td>
+      <td>
+        <a
+          href="/tygia/bao-viet"
+          title="Tỷ giá ngân hàng TMCP Bảo Việt - BAOVIET Bank"
+          >TMCP Bảo Việt - BAOVIET Bank</a
+        >
+      </td>
+      <td class="text-right">Hôm nay</td>
+    </tr>
+    <tr>
+      <td>
+        <a
+          href="/tygia/bidv"
+          class="bank-icon"
+          title="Tỷ giá ngân hàng Đầu tư và Phát triển Việt Nam"
+          ><span class="bak-icon bi-bidv"></span><span>BIDV</span></a
+        >
+      </td>
+      <td>
+        <a
+          href="/tygia/bidv"
+          title="Tỷ giá ngân hàng Đầu tư và Phát triển Việt Nam"
+          >Đầu tư và Phát triển Việt Nam</a
+        >
+      </td>
+      <td class="text-right">Hôm nay</td>
+    </tr>
+    <tr>
+      <td>
+        <a
+          href="tygia/cbbank/"
+          class="bank-icon"
+          title="Tỷ giá ngân hàng TNHH MTV Xây dựng Việt Nam"
+          ><span class="bak-icon bi-cbbank"></span><span>CBBank</span></a
+        >
+      </td>
+      <td>
+        <a
+          href="tygia/cbbank/"
+          title="Tỷ giá ngân hàng TNHH MTV Xây dựng Việt Nam"
+          >TNHH MTV Xây dựng Việt Nam</a
+        >
+      </td>
+      <td class="text-right">Hôm nay</td>
+    </tr>
+    <tr>
+      <td>
+        <a
+          href="/tygia/dong-a"
+          class="bank-icon"
+          title="Tỷ giá ngân hàng TMCP Đông Á - DongA Bank"
+          ><span class="bak-icon bi-dongabank"></span><span>Đông Á</span></a
+        >
+      </td>
+      <td>
+        <a
+          href="/tygia/dong-a"
+          title="Tỷ giá ngân hàng TMCP Đông Á - DongA Bank"
+          >TMCP Đông Á - DongA Bank</a
+        >
+      </td>
+      <td class="text-right">Hôm nay</td>
+    </tr>
+    <tr>
+      <td>
+        <a
+          href="/tygia/eximbank"
+          class="bank-icon"
+          title="Tỷ giá ngân hàng TMCP Xuất Nhập khẩu Việt Nam"
+          ><span class="bak-icon bi-eximbank"></span><span>Eximbank</span></a
+        >
+      </td>
+      <td>
+        <a
+          href="/tygia/eximbank"
+          title="Tỷ giá ngân hàng TMCP Xuất Nhập khẩu Việt Nam"
+          >TMCP Xuất Nhập khẩu Việt Nam</a
+        >
+      </td>
+      <td class="text-right">Hôm nay</td>
+    </tr>
+    <tr>
+      <td>
+        <a
+          href="/tygia/gpbank"
+          class="bank-icon"
+          title="Tỷ giá ngân hàng TM TNHH MTV Dầu Khí Toàn Cầu"
+          ><span class="bak-icon bi-gpbank"></span><span>GPBank</span></a
+        >
+      </td>
+      <td>
+        <a
+          href="/tygia/gpbank"
+          title="Tỷ giá ngân hàng TM TNHH MTV Dầu Khí Toàn Cầu"
+          >TM TNHH MTV Dầu Khí Toàn Cầu</a
+        >
+      </td>
+      <td class="text-right">Hôm nay</td>
+    </tr>
+    <tr>
+      <td>
+        <a
+          href="/tygia/hdbank"
+          class="bank-icon"
+          title="Tỷ giá ngân hàng TMCP Phát triển Nhà TP. Hồ Chí Minh"
+          ><span class="bak-icon bi-hdbank"></span><span>HDBank</span></a
+        >
+      </td>
+      <td>
+        <a
+          href="/tygia/hdbank"
+          title="Tỷ giá ngân hàng TMCP Phát triển Nhà TP. Hồ Chí Minh"
+          >TMCP Phát triển Nhà TP. Hồ Chí Minh</a
+        >
+      </td>
+      <td class="text-right">Hôm nay</td>
+    </tr>
+    <tr>
+      <td>
+        <a
+          href="/tygia/hong-leong"
+          class="bank-icon"
+          title="Tỷ giá ngân hàng Hong Leong Việt Nam"
+          ><span class="bak-icon bi-hlbank"></span><span>Hong Leong</span></a
+        >
+      </td>
+      <td>
+        <a href="/tygia/hong-leong" title="Tỷ giá ngân hàng Hong Leong Việt Nam"
+          >Hong Leong Việt Nam</a
+        >
+      </td>
+      <td class="text-right">Hôm nay</td>
+    </tr>
+    <tr>
+      <td>
+        <a
+          href="/tygia/hsbc"
+          class="bank-icon"
+          title="Tỷ giá ngân hàng HSBC Việt Nam"
+          ><span class="bak-icon bi-hsbc"></span><span>HSBC</span></a
+        >
+      </td>
+      <td>
+        <a href="/tygia/hsbc" title="Tỷ giá ngân hàng HSBC Việt Nam"
+          >HSBC Việt Nam</a
+        >
+      </td>
+      <td class="text-right">Hôm nay</td>
+    </tr>
+    <tr>
+      <td>
+        <a
+          href="/tygia/indovina-bank"
+          class="bank-icon"
+          title="Tỷ giá ngân hàng TNHH Indovina"
+          ><span class="bak-icon bi-indovinabank"></span
+          ><span>Indovina</span></a
+        >
+      </td>
+      <td>
+        <a href="/tygia/indovina-bank" title="Tỷ giá ngân hàng TNHH Indovina"
+          >TNHH Indovina</a
+        >
+      </td>
+      <td class="text-right">Hôm nay</td>
+    </tr>
+    <tr>
+      <td>
+        <a
+          href="tygia/kien-long"
+          class="bank-icon"
+          title="Tỷ giá ngân hàng TMCP Kiên Long"
+          ><span class="bak-icon bi-kienlongbank"></span
+          ><span>Kiên Long</span></a
+        >
+      </td>
+      <td>
+        <a href="tygia/kien-long" title="Tỷ giá ngân hàng TMCP Kiên Long"
+          >TMCP Kiên Long</a
+        >
+      </td>
+      <td class="text-right">Hôm nay</td>
+    </tr>
+    <tr>
+      <td>
+        <a
+          href="/tygia/lien-viet"
+          class="bank-icon"
+          title="Tỷ giá ngân hàng TMCP Bưu điện Liên Việt"
+          ><span class="bak-icon bi-lienvietpostbank"></span
+          ><span>Liên Việt</span></a
+        >
+      </td>
+      <td>
+        <a
+          href="/tygia/lien-viet"
+          title="Tỷ giá ngân hàng TMCP Bưu điện Liên Việt"
+          >TMCP Bưu điện Liên Việt</a
+        >
+      </td>
+      <td class="text-right">Hôm nay</td>
+    </tr>
+    <tr>
+      <td>
+        <a
+          href="/tygia/mariatime-bank"
+          class="bank-icon"
+          title="Tỷ giá ngân hàng TMCP Hàng Hải Việt Nam"
+          ><span class="bak-icon bi-maritimebank"></span><span>MSB</span></a
+        >
+      </td>
+      <td>
+        <a
+          href="/tygia/mariatime-bank"
+          title="Tỷ giá ngân hàng TMCP Hàng Hải Việt Nam"
+          >TMCP Hàng Hải Việt Nam</a
+        >
+      </td>
+      <td class="text-right">Hôm nay</td>
+    </tr>
+    <tr>
+      <td>
+        <a
+          href="/tygia/mbbank"
+          class="bank-icon"
+          title="Tỷ giá ngân hàng TMCP Quân Đội"
+          ><span class="bak-icon bi-mbbank"></span><span>MB</span></a
+        >
+      </td>
+      <td>
+        <a href="/tygia/mbbank" title="Tỷ giá ngân hàng TMCP Quân Đội"
+          >TMCP Quân Đội</a
+        >
+      </td>
+      <td class="text-right">Hôm nay</td>
+    </tr>
+    <tr>
+      <td>
+        <a
+          href="/tygia/nam-a-bank"
+          class="bank-icon"
+          title="Tỷ giá ngân hàng TMCP Nam Á"
+          ><span class="bak-icon bi-namabank"></span><span>Nam Á</span></a
+        >
+      </td>
+      <td>
+        <a href="/tygia/nam-a-bank" title="Tỷ giá ngân hàng TMCP Nam Á"
+          >TMCP Nam Á</a
+        >
+      </td>
+      <td class="text-right">Hôm nay</td>
+    </tr>
+    <tr>
+      <td>
+        <a
+          href="/tygia/ncb/"
+          class="bank-icon"
+          title="Tỷ giá ngân hàng TMCP Quốc Dân"
+          ><span class="bak-icon bi-ncb"></span><span>NCB</span></a
+        >
+      </td>
+      <td>
+        <a href="tygia/ncb" title="Tỷ giá ngân hàng TMCP Quốc Dân"
+          >TMCP Quốc Dân</a
+        >
+      </td>
+      <td class="text-right">Hôm nay</td>
+    </tr>
+    <tr>
+      <td>
+        <a
+          href="/tygia/ocb"
+          class="bank-icon"
+          title="Tỷ giá ngân hàng TMCP Phương Đông"
+          ><span class="bak-icon bi-ocb"></span><span>OCB</span></a
+        >
+      </td>
+      <td>
+        <a href="/tygia/ocb" title="Tỷ giá ngân hàng TMCP Phương Đông"
+          >TMCP Phương Đông</a
+        >
+      </td>
+      <td class="text-right">Hôm nay</td>
+    </tr>
+    <tr>
+      <td>
+        <a
+          href="/tygia/oceanbank"
+          class="bank-icon"
+          title="Tỷ giá ngân hàng TM TNHH MTV Đại Dương"
+          ><span class="bak-icon bi-oceanbank"></span><span>OceanBank</span></a
+        >
+      </td>
+      <td>
+        <a
+          href="/tygia/oceanbank"
+          title="Tỷ giá ngân hàng TM TNHH MTV Đại Dương"
+          >TM TNHH MTV Đại Dương</a
+        >
+      </td>
+      <td class="text-right">Hôm nay</td>
+    </tr>
+    <tr>
+      <td>
+        <a
+          href="/tygia/pgbank"
+          class="bank-icon"
+          title="Tỷ giá ngân hàng TMCP Xăng dầu Petrolimex"
+          ><span class="bak-icon bi-pgbank"></span><span>PGBank</span></a
+        >
+      </td>
+      <td>
+        <a
+          href="/tygia/pgbank/"
+          title="Tỷ giá ngân hàng TMCP Xăng dầu Petrolimex"
+          >TMCP Xăng dầu Petrolimex</a
+        >
+      </td>
+      <td class="text-right">Hôm nay</td>
+    </tr>
+    <tr>
+      <td>
+        <a
+          href="/tygia/public-bank"
+          class="bank-icon"
+          title="Tỷ giá ngân hàng TNHH MTV Public Việt Nam"
+          ><span class="bak-icon bi-publicbank"></span
+          ><span>PublicBank</span></a
+        >
+      </td>
+      <td>
+        <a
+          href="/tygia/public-bank"
+          title="Tỷ giá ngân hàng TNHH MTV Public Việt Nam"
+          >TNHH MTV Public Việt Nam</a
+        >
+      </td>
+      <td class="text-right">Hôm nay</td>
+    </tr>
+    <tr>
+      <td>
+        <a
+          href="/tygia/pvcombank/"
+          class="bank-icon"
+          title="Tỷ giá ngân hàng TMCP Đại Chúng Việt Nam"
+          ><span class="bak-icon bi-pvcombank"></span><span>PVcomBank</span></a
+        >
+      </td>
+      <td>
+        <a
+          href="/tygia/pvcombank/"
+          title="Tỷ giá ngân hàng TMCP Đại Chúng Việt Nam"
+          >TMCP Đại Chúng Việt Nam</a
+        >
+      </td>
+      <td class="text-right">Hôm nay</td>
+    </tr>
+    <tr>
+      <td>
+        <a
+          href="/tygia/sacombank/"
+          class="bank-icon"
+          title="Tỷ giá ngân hàng TMCP Sài Gòn Thương Tín"
+          ><span class="bak-icon bi-sacombank"></span><span>Sacombank</span></a
+        >
+      </td>
+      <td>
+        <a
+          href="/tygia/sacombank/"
+          title="Tỷ giá ngân hàng TMCP Sài Gòn Thương Tín"
+          >TMCP Sài Gòn Thương Tín</a
+        >
+      </td>
+      <td class="text-right">Hôm nay</td>
+    </tr>
+    <tr>
+      <td>
+        <a
+          href="/tygia/saigonbank/"
+          class="bank-icon"
+          title="Tỷ giá ngân hàng TMCP Sài Gòn Công Thương"
+          ><span class="bak-icon bi-saigonbank"></span
+          ><span>Saigonbank</span></a
+        >
+      </td>
+      <td>
+        <a
+          href="/tygia/saigonbank/"
+          title="Tỷ giá ngân hàng TMCP Sài Gòn Công Thương"
+          >TMCP Sài Gòn Công Thương</a
+        >
+      </td>
+      <td class="text-right">Hôm nay</td>
+    </tr>
+    <tr>
+      <td>
+        <a
+          href="/tygia/scb/"
+          class="bank-icon"
+          title="Tỷ giá ngân hàng TMCP Sài Gòn"
+          ><span class="bak-icon bi-scb"></span><span>SCB</span></a
+        >
+      </td>
+      <td>
+        <a href="/tygia/scb/" title="Tỷ giá ngân hàng TMCP Sài Gòn"
+          >TMCP Sài Gòn</a
+        >
+      </td>
+      <td class="text-right">Hôm nay</td>
+    </tr>
+    <tr>
+      <td>
+        <a
+          href="/tygia/seabank/"
+          class="bank-icon"
+          title="Tỷ giá ngân hàng TMCP Đông Nam Á"
+          ><span class="bak-icon bi-seabank"></span><span>SeABank</span></a
+        >
+      </td>
+      <td>
+        <a href="/tygia/seabank/" title="Tỷ giá ngân hàng TMCP Đông Nam Á"
+          >TMCP Đông Nam Á</a
+        >
+      </td>
+      <td class="text-right">Hôm nay</td>
+    </tr>
+    <tr>
+      <td>
+        <a
+          href="/tygia/shb"
+          class="bank-icon"
+          title="Tỷ giá ngân hàng TMCP Sài Gòn - Hà Nội"
+          ><span class="bak-icon bi-shbbank"></span><span>SHB</span></a
+        >
+      </td>
+      <td>
+        <a href="/tygia/shb" title="Tỷ giá ngân hàng TMCP Sài Gòn - Hà Nội"
+          >TMCP Sài Gòn - Hà Nội</a
+        >
+      </td>
+      <td class="text-right">Hôm nay</td>
+    </tr>
+    <tr>
+      <td>
+        <a
+          href="https://webgia.com/ty-gia/techcombank/"
+          class="bank-icon"
+          title="Tỷ giá ngân hàng TMCP Kỹ thương Việt Nam"
+          ><span class="bak-icon bi-techcombank"></span
+          ><span>Techcombank</span></a
+        >
+      </td>
+      <td>
+        <a
+          href="https://webgia.com/ty-gia/techcombank/"
+          title="Tỷ giá ngân hàng TMCP Kỹ thương Việt Nam"
+          >TMCP Kỹ thương Việt Nam</a
+        >
+      </td>
+      <td class="text-right">Hôm nay</td>
+    </tr>
+    <tr>
+      <td>
+        <a
+          href="/tygia/tpbank/"
+          class="bank-icon"
+          title="Tỷ giá ngân hàng TMCP Tiên Phong"
+          ><span class="bak-icon bi-tpbank"></span><span>TPB</span></a
+        >
+      </td>
+      <td>
+        <a href="/tygia/tpbank/" title="Tỷ giá ngân hàng TMCP Tiên Phong"
+          >TMCP Tiên Phong</a
+        >
+      </td>
+      <td class="text-right">Hôm nay</td>
+    </tr>
+    <tr>
+      <td>
+        <a
+          href="/tygia/uob/"
+          class="bank-icon"
+          title="Tỷ giá ngân hàng UOB Việt Nam"
+          ><span class="bak-icon bi-uob"></span><span>UOB</span></a
+        >
+      </td>
+      <td>
+        <a href="/tygia/uob/" title="Tỷ giá ngân hàng UOB Việt Nam"
+          >UOB Việt Nam</a
+        >
+      </td>
+      <td class="text-right">Hôm nay</td>
+    </tr>
+    <tr>
+      <td>
+        <a
+          href="/tygia/vib/"
+          class="bank-icon"
+          title="Tỷ giá ngân hàng TMCP Quốc tế Việt Nam"
+          ><span class="bak-icon bi-vib"></span><span>VIB</span></a
+        >
+      </td>
+      <td>
+        <a href="/tygia/vib/" title="Tỷ giá ngân hàng TMCP Quốc tế Việt Nam"
+          >TMCP Quốc tế Việt Nam</a
+        >
+      </td>
+      <td class="text-right">Hôm nay</td>
+    </tr>
+    <tr>
+      <td>
+        <a
+          href="/tygia/viet-a-bank"
+          class="bank-icon"
+          title="Tỷ giá ngân hàng TMCP Việt Á"
+          ><span class="bak-icon bi-vietabank"></span><span>VietABank</span></a
+        >
+      </td>
+      <td>
+        <a href="/tygia/viet-a-bank" title="Tỷ giá ngân hàng TMCP Việt Á"
+          >TMCP Việt Á</a
+        >
+      </td>
+      <td class="text-right">Hôm nay</td>
+    </tr>
+    <tr>
+      <td>
+        <a
+          href="/tygia/viet-bank/"
+          class="bank-icon"
+          title="Tỷ giá ngân hàng TMCP Việt Nam Thương Tín"
+          ><span class="bak-icon bi-vietbank"></span><span>VietBank</span></a
+        >
+      </td>
+      <td>
+        <a
+          href="/tygia/viet-bank/"
+          title="Tỷ giá ngân hàng TMCP Việt Nam Thương Tín"
+          >TMCP Việt Nam Thương Tín</a
+        >
+      </td>
+      <td class="text-right">Hôm nay</td>
+    </tr>
+    <tr>
+      <td>
+        <a
+          href="/tygia/ban-viet"
+          class="bank-icon"
+          title="Tỷ giá ngân hàng TMCP Bản Việt"
+          ><span class="bak-icon bi-vietcapitalbank"></span
+          ><span>VietCapitalBank</span></a
+        >
+      </td>
+      <td>
+        <a href="/tygia/ban-viet" title="Tỷ giá ngân hàng TMCP Bản Việt"
+          >TMCP Bản Việt</a
+        >
+      </td>
+      <td class="text-right">Hôm nay</td>
+    </tr>
+    <tr>
+      <td>
+        <a
+          href="/tygia/vietcombank"
+          class="bank-icon"
+          title="Tỷ giá ngân hàng TMCP Ngoại thương Việt Nam"
+          ><span class="bak-icon bi-vietcombank"></span
+          ><span>Vietcombank</span></a
+        >
+      </td>
+      <td>
+        <a
+          href="/tygia/vietcombank"
+          title="Tỷ giá ngân hàng TMCP Ngoại thương Việt Nam"
+          >TMCP Ngoại thương Việt Nam</a
+        >
+      </td>
+      <td class="text-right">Hôm nay</td>
+    </tr>
+    <tr>
+      <td>
+        <a
+          href="/tygia/viettinbank"
+          class="bank-icon"
+          title="Tỷ giá ngân hàng TMCP Công Thương Việt Nam"
+          ><span class="bak-icon bi-vietinbank"></span
+          ><span>VietinBank</span></a
+        >
+      </td>
+      <td>
+        <a
+          href="/tygia/viettinbank"
+          title="Tỷ giá ngân hàng TMCP Công Thương Việt Nam"
+          >TMCP Công Thương Việt Nam</a
+        >
+      </td>
+      <td class="text-right">Hôm nay</td>
+    </tr>
+    <tr>
+      <td>
+        <a
+          href="tygia/vpbank/"
+          class="bank-icon"
+          title="Tỷ giá ngân hàng TMCP Việt Nam Thịnh Vượng"
+          ><span class="bak-icon bi-vpbank"></span><span>VPBank</span></a
+        >
+      </td>
+      <td>
+        <a
+          href="/tygia/vpbank/"
+          title="Tỷ giá ngân hàng TMCP Việt Nam Thịnh Vượng"
+          >TMCP Việt Nam Thịnh Vượng</a
+        >
+      </td>
+      <td class="text-right">Hôm nay</td>
+    </tr>
+    <tr>
+      <td>
+        <a
+          href="/tygia/vrbank/"
+          class="bank-icon"
+          title="Tỷ giá ngân hàng Liên doanh Việt - Nga"
+          ><span class="bak-icon bi-vrbank"></span><span>VRB</span></a
+        >
+      </td>
+      <td>
+        <a href="/tygia/vrbank/" title="Tỷ giá ngân hàng Liên doanh Việt - Nga"
+          >Liên doanh Việt - Nga</a
+        >
+      </td>
+      <td class="text-right">Hôm nay</td>
+    </tr>
+  </tbody>
+</table>
+{% endblock %}

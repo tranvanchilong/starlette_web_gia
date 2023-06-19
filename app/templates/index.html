@@ -1,0 +1,68 @@
+{% extends "base.html" %} {% block head%}
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="//cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css"
+/>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"
+/>
+
+<script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+{% endblock %} {% block content%}
+<div class="rowTwo block">
+  <!-- Secondary sidebar wrapper -->
+  <div class="secSide wrapper" id="secSide-wrapper">
+    <div
+      class="sidebar section"
+      id="indexSecSide"
+      name="Secondary Sidebar [Home]"
+    >
+      <div class="widget HTML" data-version="2" id="HTML2">
+        <div class="widget-content"></div>
+      </div>
+      <div
+        class="widget LinkList"
+        data-type="Icons"
+        data-version="2"
+        id="LinkList7"
+      >
+        <div class="widget-heading">
+          <h3 class="title">Top module</h3>
+        </div>
+        <!-- a=(a)->ax10  a=a->ix10 a=3x10 -->
+        <div class="widget-content">
+          <ul>
+        {% for post in fathers[(i-1)*20:i*20] %}
+            <li class="fb faStyle">
+              <!-- <a href = “/{{ post['language'] }}/{i}"> {i}  </a> -->
+              <a
+                href="/{{ language }}/{{ post }}/1"
+                style="text-decoration: none; color: black"
+                >{{ post }}</a
+              >
+            </li>
+            
+            {% endfor %}
+          <div>
+           {% set a=i %}
+           {% if a+1-5>0 %}
+            {% for i in range(a+1-5,a+11-5) %}
+            <a href="{{i}}" style="padding-right: 20px;">{{i}}</a>
+            {% endfor %}
+           {%else%}
+           {% set a=1 %}
+            {% for i in range(a,a+11) %}
+            <a href="{{i}}" style="padding-right: 20px;">{{i}}</a>
+            {% endfor %}
+            {%endif%}
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endblock %}
+  </div>
+</div>

@@ -1,0 +1,47 @@
+# version: "3.8"
+
+# services:
+#   app:
+#     image: registry.gitlab.com/q347/starlette_crawl_code:v0.3
+#     container_name: starlette_crawl_code
+#     command: gunicorn --worker-class=uvicorn.workers.UvicornWorker --log-level warning --worker-connections=1000 --workers=3 --bind 0.0.0.0:5000 app:app
+#     restart: unless-stopped
+#     volumes:
+#       - ./app:/app
+#     environment:
+#       VIRTUAL_HOST: giaca.webcrawl.xyz #starlette_crawl_code.13net.xyz
+#       VIRTUAL_PORT: 5000
+#     logging:
+#       driver: "json-file"
+#       options:
+#         max-file: "5"
+#         max-size: "10m"
+# networks:
+#   default:
+#     external:
+#       name: b_nginx_network
+
+version: "3.8"
+
+services:
+  app:
+    image: registry.gitlab.com/q347/starlette_crawl_code:v0.4
+    container_name: starlette_crawl_code
+    command: gunicorn --worker-class=uvicorn.workers.UvicornWorker --log-level warning --worker-connections=1000 --workers=3 --bind 0.0.0.0:5000 app:app
+    restart: unless-stopped
+    volumes:
+      - ./app:/app
+    ports:
+      - "5001:5000"
+    environment:
+      VIRTUAL_HOST: giaca.qbtool.xyz
+      VIRTUAL_PORT: 5000
+    logging:
+      driver: "json-file"
+      options:
+        max-file: "5"
+        max-size: "10m"
+networks:
+  default:
+    external:
+      name: b_nginx_network

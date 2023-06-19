@@ -1,0 +1,54 @@
+{% extends "base.html" %} {% block head%} 
+
+{% endblock %} {% block content%}
+<div class="container">
+          <div class="header-bottom">
+            <div class="cate-list d-flex flex-wrap">
+                {% for cat in name_datas %}  
+                  {%if cat.name != "tiền ảo"%}
+                    <a class="cate-item" href="#">{{cat.name}}</a>
+                  {%endif%}
+              {%endfor%}
+            </div>
+          </div>
+        </div>
+      </section>
+    </header>
+    <main>
+      <div class="container">
+        <div class="row mt-2">
+          <article id="main" class="col-md-9 p-3">
+            <h1 class="h5 text-main">
+              Tổng hợp Giá vàng SJC trên Toàn Quốc
+              <small> - Cập nhật lúc 16:30:23 22/12/2022</small>
+            </h1>
+            <p>
+              Bảng so sánh giá vàng SJC trên toàn quốc cập nhật lúc
+              <span class="text-main">16:40:23 22/12/2022</span>
+            </p>
+            <p>
+              Giá vàng SJC được cập nhật liên tục tại các hệ thống: SJC, DOJI,
+              PNJ, Phú Quý, Bảo Tín Minh Châu.
+            </p>
+            <p>
+              Ở bảng so sánh bên dưới,
+              <span class="text-green fw-semibold">màu xanh</span> ở cột
+              <span class="text-brown fw-semibold">Mua vào</span> sẽ tương ứng
+              với giá
+              <span class="text-brown fw-semibold">Mua vào cao nhất</span>;
+              <span class="text-green fw-semibold">màu xanh</span> ở cột Bán ra
+              sẽ tương ứng với giá
+              <span class="text-brown fw-semibold">bán ra thấp nhất</span>.
+            </p>
+            <div class="unit text-end fst-italic fw-semibold text-red">
+              <p>Đơn vị: đồng / chỉ</p></div>
+      
+          {{data|safe}}
+       
+            {% endblock %}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

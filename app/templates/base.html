@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="{{ url_for('static', path='main.css') }}" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', path='favicon.ico') }}" />    
+    {% if data2 is defined %}
+      <title>{{data2}}</title>
+    {% else %}
+      <title>Giá cả</title>
+    {%endif%}
+    <meta charset="UTF-8">
+  </head>
+  <body class="" >
+    <header>
+      <section class="header">
+        <div class="header-top">
+          <div
+            class="container d-flex align-items-center justify-content-between"
+          >
+            <div class="left-side-header d-flex justify-content-between mt-2">
+              <div class="logo h4"><a href="/">GiaCa.Com</a></div>
+              <div class="search ms-2">
+                <input
+                  type="text"
+                  name="search"
+                  id="search"
+                  placeholder="Tìm kiếm"
+                />
+
+                <svg
+                  id="icon-search"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  viewBox="0 0 192.904 192.904"
+                  xml:space="preserve"
+                  width="18"
+                  height="18"
+                >
+                  <path
+                    d="M190.707,180.101l-47.078-47.077c11.702-14.072,18.752-32.142,18.752-51.831C162.381,36.423,125.959,0,81.191,0  C36.422,0,0,36.423,0,81.193c0,44.767,36.422,81.187,81.191,81.187c19.688,0,37.759-7.049,51.831-18.751l47.079,47.078  c1.464,1.465,3.384,2.197,5.303,2.197c1.919,0,3.839-0.732,5.304-2.197C193.637,187.778,193.637,183.03,190.707,180.101z M15,81.193  C15,44.694,44.693,15,81.191,15c36.497,0,66.189,29.694,66.189,66.193c0,36.496-29.692,66.187-66.189,66.187  C44.693,147.38,15,117.689,15,81.193z"
+                  ></path>
+                </svg>
+              </div>
+              <div class="navbar-mobile">
+                <span class="up"></span>
+                <span class="down"></span>
+              </div>
+            </div>
+            <div class="nav-link-list d-flex">
+              <div class="nav-link-item dropdown menu-sub">
+                <a href="/giavang/sjc-tren-toan-quoc"
+                  >Giá vàng <span class="caret"></span
+                ></a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <ul>
+                      <li class="dropdown-header">Bảng giá vàng</li>
+                      <li><a href="/giavang/sjc"> Giá vàng SJC</a></li>
+                      <li><a href="/giavang/doji">Giá vàng DOJI</a></li>
+                      <li><a href="/giavang/pnj">Giá vàng PNJ</a></li>
+                      <li><a href="/giavang/phu-quy">Giá vàng Phú Quý</a></li>
+                      <li><a href="/giavang/bao-tin-minh-chau">Bảo Tín Minh Châu</a></li>
+                      <li><a href="/giavang/mi-hong">Mi Hồng</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <ul>
+                      <li class="dropdown-header">Biểu đồ giá vàng</li>
+                      <li><a href="/giavang/sjc-hom-nay">Biểu đồ SJC hôm nay</a></li>
+                      <li><a href="/giavang/sjc-1-thang">Biểu đồ SJC 1 tháng</a></li>
+                      <li><a href="/giavang/sjc-1-nam">Biểu đồ SJC 1 năm</a></li>
+                      <li><a href="/giavang/the-gioi">Biểu đồ giá vàng Thế giới</a></li>
+                    </ul>
+                  </li>
+                  <!-- <li>
+                    <ul>
+                      <li class="dropdown-header">Giá vàng thế giới</li>
+                      <li><a href="/giavang/thế giới">Biểu đồ giá vàng Thế giới</a></li>
+                    </ul>
+                  </li> -->
+                </ul>
+              </div>
+              <div class="nav-link-item dropdown menu-sub">
+                <a href="/tygia"
+                  >Tỷ giá ngân hàng <span class="caret"></span
+                ></a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <ul>
+                      <!-- <li class="dropdown-header">Giá vàng trong nước</li> -->
+                      
+                      <li><a href="/tygia/abbank">ABBank</a></li>
+                      <li><a href="/tygia/acb">ACB</a></li>
+                      <li><a href="/tygia/agribank">Agribank</a></li>
+                      <li><a href="/tygia/ban-viet">Bản Việt</a></li>
+                      <li><a href="/tygia/pvcombank">PVcomBank</a></li>
+                      <li><a href="/tygia/sacombank">Sacombank</a></li>
+                      <li><a href="/tygia/saigonbank">SaigonBank</a></li>
+                      <li><a href="/tygia/bao-viet">Bảo Việt Bank</a></li>
+                      <li><a href="/tygia/bidv">BIDV</a></li>
+                      <li><a href="/tygia/cbbank">CBBank</a></li>
+                      <li><a href="/tygia/dong-a">Đông Á</a></li>
+                      <li><a href="/tygia/oceanbank">OceanBank</a></li>
+                      <li><a href="/tygia/ocb">OCB</a></li>
+                      <li><a href="/tygia/vrbank">VRBank</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <ul>
+                      <!-- <li class="dropdown-header">Biểu đồ giá vàng SJC</li> -->
+                      <li><a href="/tygia/scb">SCB</a></li>
+                      <li><a href="/tygia/seabank">SeABank</a></li>
+                      <li><a href="/tygia/shb">SHB</a></li>
+                      <li><a href="/tygia/techcombank">Techcombank</a></li>
+                      <li><a href="/tygia/eximbank">Eximbank</a></li>
+                      <li><a href="/tygia/gpbank">GPBank</a></li>
+                      <li><a href="/tygia/hdbank">HDBank</a></li>
+                      <li><a href="/tygia/hong-leong">Hong Leong</a></li>
+                      <li><a href="/tygia/tpbank">TPBank</a></li>
+                      <li><a href="/tygia/kien-long">UOB</a></li>
+                      <li><a href="/tygia/hsbc">HSBC</a></li>
+                      <li><a href="/tygia/indovina-bank">Indovina</a></li>
+                      <li><a href="/tygia/kien-long">Kiên Long</a></li>
+                      <li><a href="/tygia/pgbank">PGBank</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <ul>
+                      <!-- <li class="dropdown-header">Giá vàng thế giới</li> -->
+                      <li><a href="/tygia/lien-viet">Liên Việt</a></li>
+                      <li><a href="/tygia/mariatime-bank">VIB</a></li>
+                      <li><a href="/tygia/viet-a-bank">VietABank</a></li>
+                      <li><a href="/tygia/viet-bank">VietBank</a></li>
+                      <li><a href="/tygia/mariatime-bank">MSB</a></li>
+                      <li><a href="/tygia/mbbank">MB</a></li>
+                      <li><a href="/tygia/nam-a-bank">Nam Á</a></li>
+                      <li><a href="/tygia/ncb">NCB</a></li>
+                      <li><a href="/tygia/vietcombank">Vietcombank</a></li>
+                      <li><a href="/tygia/viettinbank">VietinBank</a></li>
+                      <li><a href="/tygia/vpbank">VPBank</a></li>
+                      <li><a href="/tygia/public-bank">PublicBank</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <div class="nav-link-item dropdown menu-sub">
+                <a href="/ngoaite/usd"
+                  >Ngoại tệ <span class="caret"></span
+                ></a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <ul>
+                      <!-- <li class="dropdown-header">Giá vàng trong nước</li> -->
+                      <li><a href="/ngoaite/aud">AUD</a></li>
+                      <li><a href="/ngoaite/cad">CAD</a></li>
+                      <li><a href="/ngoaite/chf">CHF</a></li>
+                      <li><a href="/ngoaite/cny">CNY</a></li>
+                      <li><a href="/ngoaite/thb">THB</a></li>
+                      <li><a href="/ngoaite/dkk">DKK</a></li>
+                      <li><a href="/ngoaite/myr">MYR</a></li>
+                      <li><a href="/ngoaite/nok">NOK</a></li>
+                      <li><a href="/ngoaite/nzd">NZD</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <ul>
+                      <!-- <li class="dropdown-header">Biểu đồ giá vàng SJC</li> -->
+                      <li><a href="/ngoaite/gbp">GBP</a></li>
+                      <li><a href="/ngoaite/twd">TWD</a></li>
+                      <li><a href="/ngoaite/hkd">HKD</a></li>
+                      <li><a href="/ngoaite/idr">IDR</a></li>
+                      <li><a href="/ngoaite/inr">INR</a></li>
+                      <li><a href="/ngoaite/jpy">JPY</a></li>
+                      <li><a href="/ngoaite/php">PHP</a></li>
+                      <li><a href="/ngoaite/rub">RUB</a></li>
+                      <li><a href="/ngoaite/sar">SAR</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <ul>
+                      <!-- <li class="dropdown-header">Giá vàng thế giới</li> -->
+                      <li><a href="/ngoaite/usd">USD</a></li>
+                      <li><a href="/ngoaite/khr">KHR</a></li>
+                      <li><a href="/ngoaite/krw">KRW</a></li>
+                      <li><a href="/ngoaite/kwd">KWD</a></li>
+                      <li><a href="/ngoaite/lak">LAK</a></li>
+                      <li><a href="/ngoaite/zar">ZAR</a></li>
+                      <li><a href="/ngoaite/sek">SEK</a></li>
+                      <li><a href="/ngoaite/sgd">SGD</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <div class="nav-link-item dropdown menu-sub">
+                <a href="/laisuat/lai-suat-ngan-hang"
+                  >Lãi suất <span class="caret"></span
+                ></a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <ul>
+                      <!-- <li class="dropdown-header">Giá vàng trong nước</li> -->
+                      <li><a href="/laisuat/abbank">ABBank</a></li>
+                      <li><a href="/laisuat/agribank">Agribank</a></li>
+                      <li><a href="/laisuat/bao-viet">Bảo Việt</a></li>
+                      <li><a href="/laisuat/bidv">BIDV</a></li>
+                      <li><a href="/laisuat/cbbank">CBBank</a></li>
+                      <li><a href="/laisuat/dong-a">Đông Á</a></li>
+                      <li><a href="/laisuat/gpbank">GPBank</a></li>
+                      <li><a href="/laisuat/hong-leong-bank">Hong Leong Bank</a></li>
+                      <li><a href="/laisuat/vietcombank">Vietcombank</a></li>
+                      <li><a href="/laisuat/vib">VIB</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <ul>
+                      <li><a href="/laisuat/indovina-bank">Indovina Bank</a></li>
+                      <li><a href="/laisuat/kien-long-bank">Kiên Long Bank</a></li>
+                      <li><a href="/laisuat/msb">Maritime Bank</a></li>
+                      <li><a href="/laisuat/mb-bank">MB Bank</a></li>
+                      <li><a href="/laisuat/nam-a-bank">Nam Á Bank</a></li>
+                      <li><a href="/laisuat/ncb">NCB</a></li>
+                      <li><a href="/laisuat/ocb">OCB</a></li>
+                      <li><a href="/laisuat/oceanbank">OceanBank</a></li>
+                      <li><a href="/laisuat/viettinbank">Viettinbank</a></li>
+                      <li><a href="/laisuat/viet-capital-bank">Bản Việt (VietCapitalBank)</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <ul>
+                      <li><a href="/laisuat/pgbank">PG Bank</a></li>
+                      <li><a href="/laisuat/publicbank">Publicbank</a></li>
+                      <li><a href="/laisuat/pvcombank">PVcombank</a></li>
+                      <li><a href="/laisuat/sai-gon-bank">SaigonBank</a></li>
+                      <li><a href="/laisuat/scb">SCB</a></li>
+                      <li><a href="/laisuat/seabank">SeABank</a></li>
+                      <li><a href="/laisuat/shb">SHB</a></li>
+                      <li><a href="/laisuat/tpbank">TPBank</a></li>
+                      <li><a href="/laisuat/vpbank">VPBank</a></li>
+                      <li><a href="/laisuat/bac-a-bank">Bắc Á</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <div class="nav-link-item dropdown menu-sub">
+                <a href="/tienao/ti-gia-tien-ao">Tiền ảo <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <ul>
+                      <!-- <li class="dropdown-header">Giá vàng trong nước</li> -->
+                      <li><a href="/tienao/btc">BTC (Bitcoin)</a></li>
+                      <li><a href="/tienao/eth">ETH (Ethereum)</a></li>
+                      <li><a href="/tienao/bnb">BNB (Binance Coin)</a></li>
+                      <li><a href="/tienao/xrp">XRP (Ripple)</a></li>
+                      <li><a href="/tienao/bch">BCH (Bitcoin Cash)</a></li>
+                      <li><a href="/tienao/xem">XEM (NEM)</a></li>
+                      <li><a href="/tienao/ltc">LTC (Litecoin)</a></li>
+                      <li></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <ul>
+                       <li><a href="/tienao/dash">DASH (Dash)</a></li>
+                      <li><a href="/tienao/etc">ETC (Ethereum Classic)</a></li>
+                      <li><a href="/tienao/neo">NEO (NEO)</a></li>
+                      <li><a href="/tienao/qtum">QTUM (Qtum)</a></li>
+                      <li><a href="/tienao/xmr">XMR (Monero)</a></li>
+                      <li><a href="/tienao/strat">STRAT (Stratis)</a></li>
+                      <li></li>
+                      <li></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <ul>
+                      <li><a href="/tienao/waves">WAVES (Waves)</a></li>
+                      <li><a href="/tienao/eos">EOS (EOS)</a></li>
+                      <li><a href="/tienao/zec">ZEC (Zcash)</a></li>
+                      <li><a href="/tienao/bts">BTS (BitShares)</a></li>
+                      <li><a href="/tienao/omg">OMG (OmiseGo)</a></li>
+                      <li><a href="/tienao/usdt">USDT (Tether)</a></li>
+                      <li></li>
+                      <li></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <div class="nav-link-item dropdown menu-sub">
+                <a href="/xangdau/petrolimex">Xăng dầu <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <ul>
+                      <!-- <li class="dropdown-header">Giá vàng trong nước</li> -->
+                      <li><a href="/xangdau/petrolimex">Petrolimex</a></li>
+                      <li><a href="/xangdau/gia-dau-tho-the-gioi">Giá dầu thô</a></li>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <div class="nav-link-item"><a href="/blog">Blog</a></div>
+            </div>
+          </div>
+        </div>
+
+            {% block content %}{% endblock %}
+             </aside>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer mt-3">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6 col-md-3">
+            <h3>Giácả.COM</h3>
+            <p>
+              Giácả.COM cập nhật nhanh nhất giá vàng, tỷ giá ngân hàng, tỷ giá
+              ngoại tệ, lãi suất ngân hàng, tỷ giá tiền điện tử, giá xăng dầu
+              trong nước và quốc tế.
+            </p>
+            <p>
+              Đội ngũ chúng tôi cập nhật liên tục, không ngừng nghỉ. Đem đến cho
+              bạn những thông tin nhanh chóng, tức thời.
+            </p>
+          </div>
+          <div class="col-sm-6 col-md-9">
+            <h3>Thông tin giá cả và mã giảm giá</h3>
+            <div class="footer-link">
+              Giá Vàng:
+              <a href="/giavang/doji">Giá vàng DOJI</a>,
+              <a href="/giavang/sjc"> Giá vàng SJC</a>,
+              <a href="/giavang/pnj">Giá vàng PNJ</a>,
+              <a href="/giavang/phu-quy">Giá vàng Phú Quý</a>,
+              <a href="/giavang/bao-tin-minh-chau">Bảo Tín Minh Châu</a>,
+              <a href="/giavang/mi-hong">Mi Hồng</a>
+            </div>
+            <div class="footer-link">
+              Tỷ giá:
+              <a href="/tygia/abbank">ABBank</a>,
+              <a href="/tygia/acb">ACB</a>,
+              <a href="/tygia/agribank">Agribank</a>,
+              <a href="/tygia/ban-viet">Bản Việt</a>,
+              <a href="/tygia/pvcombank">PVcomBank</a>,
+              <a href="/tygia/sacombank">Sacombank</a>,
+              <a href="/tygia/saigonbank">SaigonBank</a>,
+              <a href="/tygia/bao-viet">Bảo Việt Bank</a>,
+              <a href="/tygia/bidv">BIDV</a>,
+              <a href="/tygia/cbbank">CBBank</a>,
+              <a href="/tygia/dong-a">Đông Á</a>,
+              <a href="/tygia/oceanbank">OceanBank</a>,
+              <a href="/tygia/ocb">OCB</a>,
+              <a href="/tygia/vrbank">VRBank</a>
+            </div>
+            <div class="footer-link">
+              Tỷ giá tiền ảo:
+              <a href="/tienao/btc">BTC (Bitcoin)</a>,
+              <a href="/tienao/eth">ETH (Ethereum)</a>,
+              <a href="/tienao/bnb">BNB (Binance Coin)</a>,
+              <a href="/tienao/xrp">XRP (Ripple)</a>,
+              <a href="/tienao/bch">BCH (Bitcoin Cash)</a>,
+              <a href="/tienao/xem">XEM (NEM)</a>,
+              <a href="/tienao/ltc">LTC (Litecoin)</a>,
+              <a href="/tienao/dash">DASH (Dash)</a>,
+              <a href="/tienao/etc">ETC (Ethereum Classic)</a>,
+              <a href="/tienao/neo">NEO (NEO)</a>,
+              <a href="/tienao/qtum">QTUM (Qtum)</a>,
+              <a href="/tienao/xmr">XMR (Monero)</a>,
+              <a href="/tienao/strat">STRAT (Stratis)</a>
+            </div>
+            <div class="footer-link">
+              Lãi suất:
+              <a href="/laisuat/abbank">ABBank</a>,
+              <a href="/laisuat/agribank">Agribank</a>,
+              <a href="/laisuat/bao-viet">Bảo Việt</a>,
+              <a href="/laisuat/bidv">BIDV</a>,
+              <a href="/laisuat/cbbank">CBBank</a>,
+              <a href="/laisuat/dong-a">Đông Á</a>,
+              <a href="/laisuat/gpbank">GPBank</a>,
+              <a href="/laisuat/hong-leong-bank">Hong Leong Bank</a>,
+              <a href="/laisuat/vietcombank">Vietcombank</a>,
+              <a href="/laisuat/vib">VIB</a>,
+              <a href="/laisuat/indovina-bank">Indovina Bank</a>,
+              <a href="/laisuat/kien-long-bank">Kiên Long Bank</a>,
+              <a href="/laisuat/msb">Maritime Bank</a>,
+              <a href="/laisuat/mb-bank">MB Bank</a>,
+              <a href="/laisuat/nam-a-bank">Nam Á Bank</a>,
+              <a href="/laisuat/ncb">NCB</a>,
+              <a href="/laisuat/ocb">OCB</a>,
+              <a href="/laisuat/oceanbank">OceanBank</a>,
+              <a href="/laisuat/viettinbank">Viettinbank</a>
+              </div>
+            <div class="footer-link">
+              Giá xăng dầu:
+              <a href="/xangdau/petrolimex">Petrolimex</a>,
+              <a href="/xangdau/gia-dau-tho-the-gioi">Giá dầu thô</a>
+            </div>
+            <div class="footer-link">
+              Liên kết hữu ích:
+              <!-- <a href="#">TheFaceShop360.net</a>,
+              <a href="#">TheFaceShop360.net</a>,
+              <a href="#">TheFaceShop360.net</a>,
+              <a href="#">TheFaceShop360.net</a>,
+              <a href="#">TheFaceShop360.net</a>,
+              <a href="#">TheFaceShop360.net</a>,
+              <a href="#">TheFaceShop360.net</a>,
+              <a href="#">TheFaceShop360.net</a>,
+              <a href="#">TheFaceShop360.net</a>,
+              <a href="#">TheFaceShop360.net</a>,
+              <a href="#">TheFaceShop360.net</a>,
+              <a href="#">TheFaceShop360.net</a> -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="container-fluid d-flex align-items-center justify-content-center"
+      >
+        <a href="#">Giới thiệu</a>
+        <a href="#">Chính sách bảo mật</a>
+        <a href="#">Điều khoản sử dụng</a>
+        <a href="#">Từ chối trách nhiệm</a>
+        <a href="#">Liên hệ</a>
+      </div>
+    </footer>
+  </body>
+  <script src="{{ url_for('static', path='main.js') }}"></script>
+</html>
